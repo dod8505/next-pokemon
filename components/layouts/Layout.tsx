@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Navbar } from "../ui";
 
 type Props = {
   title?: string;
@@ -17,7 +18,16 @@ export const Layaout = ({ title, children }: Props) => {
         />
         <meta name="keywords" content={`${title}, pokemon, pokedex`} />
       </Head>
-      <main>{children}</main>
+
+      <Navbar />
+
+      <main
+        style={{
+          padding: "0px 20px",
+        }}
+      >
+        {children}
+      </main>
     </>
   );
 };
